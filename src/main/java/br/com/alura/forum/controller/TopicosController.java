@@ -3,6 +3,7 @@ package br.com.alura.forum.controller;
 import java.net.URI;
 import java.util.List;
 
+import br.com.alura.forum.controller.dto.DetalhesDoTopicoDto;
 import br.com.alura.forum.controller.form.TopicoForm;
 import br.com.alura.forum.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,12 @@ public class TopicosController {
 		URI uri = uriBuilder.path("/topicos/{id}").buildAndExpand(topico.getId()).toUri();
 
 		return ResponseEntity.created(uri).body(new TopicoDto(topico));
+	}
+
+	@GetMapping("/{id}")
+	public DetalhesDoTopicoDto detalhar(@PathVariable Long id){
+		Topico topico = topicoRepository.getOne(id);
+		return new DetalhesDoTopicoDto(topico);
 	}
 
 }
