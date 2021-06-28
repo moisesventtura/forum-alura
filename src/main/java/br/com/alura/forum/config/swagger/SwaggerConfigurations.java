@@ -19,5 +19,7 @@ public class SwaggerConfigurations {
                 .paths(PathSelectors.ant("/**")) // quais endpoints fazer analise
                 .build()
                 .ignoredParameterTypes(Usuario.class); // Ignore todas as URLs que trabalham com a classe Usuario, ignorar objetos do tipo Usuario
+
+        // para acessar localhost:8080/swagger-ui.html
     }
 }
