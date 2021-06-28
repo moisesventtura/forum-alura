@@ -14,4 +14,11 @@ public class ForumApplication {
 		SpringApplication.run(ForumApplication.class, args);
 	}
 
+	/**
+	 * Foi criado um outro projeto chamado Spring Boot Admin para monitorar o projeto forum.
+	 * O projeto citado não foi colocado no GitHub.
+	 *
+	 * @Version 1.0
+	 */
+
 }
